@@ -2,14 +2,6 @@
 # Copy‑paste into user_data/strategies/AdvancedFibonacciStrategy.py
 # Freqtrade >= 2024.x (tested on 2025.x API surface)
 #
-# Key fixes vs. original:
-# 1) Removed accidental "| True" in multi‑TF checks (they're now real filters).
-# 2) Tightened Fibonacci tolerance for BTC (±1.5–3%).
-# 3) ATR‑based dynamic stoploss made sensible (3.5× ATR floor, never tighter than base).
-# 4) Volume/context stricter for BTC, added EMA20>EMA50 trend filter.
-# 5) Exit logic allows BB extremes OR Fib resistance + hot RSI.
-# 6) All comments/strings converted to English.
-#
 # Tailored defaults target BTC/USDT on 15m; hyperopt ranges provided as Parameters.
 
 from functools import reduce
